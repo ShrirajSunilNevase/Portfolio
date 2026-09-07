@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function NotFound(){return <main className="min-h-screen grid place-items-center px-6"><div className="text-center"><div className="font-mono text-cyan-400 text-sm mb-4">ROUTE_NOT_FOUND</div><h1 className="text-7xl sm:text-9xl font-black tracking-tight">404</h1><p className="mt-5 text-slate-500 dark:text-slate-400">Looks like this route doesn&apos;t exist.</p><Link href="/" className="btn-primary inline-flex mt-8">Back Home</Link></div></main>}

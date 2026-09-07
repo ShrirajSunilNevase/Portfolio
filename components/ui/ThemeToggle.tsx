@@ -1,0 +1,3 @@
+'use client';
+import { Moon, Sun } from 'lucide-react';import { useTheme } from 'next-themes';import { useEffect,useState } from 'react';
+export default function ThemeToggle(){const{theme,setTheme}=useTheme();const[mounted,setMounted]=useState(false);useEffect(()=>setMounted(true),[]);if(!mounted)return <button aria-label="Toggle theme" className="h-10 w-10 rounded-xl border" style={{borderColor:'var(--border)'}}/>;const dark=theme==='dark';return <button onClick={()=>setTheme(dark?'light':'dark')} aria-label={dark?'Switch to light mode':'Switch to dark mode'} className="grid h-10 w-10 place-items-center rounded-xl border transition hover:border-cyan-400/50" style={{borderColor:'var(--border)'}}>{dark?<Sun size={17}/>:<Moon size={17}/>}</button>}
